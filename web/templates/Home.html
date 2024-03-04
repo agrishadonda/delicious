@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div>
+                <a href="home.html">
+                <img class="logo" src="../static/image/appnext-1-removebg-preview.png" alt="" height="50px" ></a>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <a href="#about">Home</a>
+                    <a href="">About</a>
+                    <a href="">Feature</a>
+                    <a href="">Testimonial</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <a href="">Signup</a>
+                    <a href="">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id = about>
+        <div class="background">
+            ::before
+          <div class="conn1">
+            <div class="tital1">
+                <h1>Perfect Design.</h1>
+                <h2>Incredible Experience.</h2>
+                <p>Abilities or he perfectly pretended so strangers be exquisite. Oh to another<br>
+                    chamber pleased imagine do in. Went me rank at last loud shot an draw.</p>
+                    <div class="but">
+                        <div class="btn1">
+                            <a href="">Download App</a>
+                        </div>
+                        <div class="btn2">
+                            <a href="">More Details</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="image">
+                <img src="../static/image/banner1-phone.png" alt="">
+            </div>
+          </div>
+          
+        </div>
+        <div class="main2">
+            <div class="sec">
+            {% for i in rec %}
+                <div class="card1">
+                    <div>
+
+                    </div>
+                    <div class="mintital">
+                        <h2>{{i.tital}}</h2>
+                        {% load custom_filter %}
+                        {% with data=i.content|split %}
+                        {% for element in data %}
+                        <p>{{element}}</p>
+                        {% endfor %}
+                        {% endwith %}
+                    </div>
+                  
+                </div>
+                {% if forloop.counter|divisibleby:3 %}</div><div class="sec">{% endif %}
+
+                {% endfor %}
+        </div>
+            <div class="background2">
+                ::before
+                <div class="para">
+                    <p>APP PREFACE</p>
+                </div>
+               <div class="main6">
+                    <div class="abc">
+                        <div class="image2">
+                            <img src="../static/image/preface.png" alt="" height="500px">
+                        </div>
+                    </div>
+                    <div class="main7">
+                        <div class="conn2">
+                            <h3>Awesome Elegant App, You Have Never<br>
+                            Experienced</h3>
+                        </div>
+                        <div class="conn3">
+                            <p>Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now<br>
+                            are middleton concluded had. It is tried no added purse shall no on truth. Pleased anxious or<br>
+                            as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind.<br>
+                            Had men rose from down lady able. Its son him ferrars proceed six parlors.</p>
+                        </div>
+                        <div class="main7">
+                    
+                                <div class="android">
+                                    <a href="#"><i class="fa-brands fa-android"></i>Available on<br>google store</a>
+                                </div>
+                
+                            <div class="main8">  
+                                <a href="#"><i class="fa-brands fa-apple"></i>Available on<br>apple store</a>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <section>
+        <div class="main5">
+            <div class="para2">
+                <h1>HOW IT WORK</h1>
+            </div>
+           <div class="main9">
+            <div class="card2">
+                <div></div>
+                <div class="conn4">
+                    <h2>Configuration</h2>
+                    <p>Literature admiration frequently<br>
+                        indulgence announcing</p>
+                   
+                </div>
+                <div class="conn5">
+                    <h2>Refresh Setup</h2>
+                    <p>Literature admiration frequently<br>
+                        indulgence announcing</p>
+                    
+                </div>
+                <div class="conn6">
+                    <h2>Start Using App</h2>
+                    <p>Literature admiration frequently<br>
+                        indulgence announcing</p>
+                    
+                </div>
+            </div>
+          
+                
+        </div>
+        <div class="background3">
+            ::before
+            <div class="para3">
+                <h1>APP FETURES</h1>
+            </div>
+            <div class="main9">
+                <div class="conn10">
+                    <div>
+
+                    </div>
+                    <div class="tital5">
+                        <h2>Easy Installation</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                    <div class="tital5">
+                        <h2>Flexible Interface</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                    <div class="tital5">
+                        <h2>Bugg Free Code</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                </div>
+                
+                <div class="conn11">
+                    <div class="tital6">
+                        <h2>Responsive Design</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                    <div class="tital6">
+                        <h2>High Resolution</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                    <div class="tital6">
+                        <h2>Cloud Storage</h2>   
+                        <p>Way nor furnished sir procuring<br>
+                            therefore but. Warmth far<br>manner myself active are<br>cannot</p>
+                    </div>
+                </div>
+                <div class="image4">
+                    <img src="../static/image/additional.png" alt="" height="500px">
+                </div>
+            </div>
+        </div>
+        <div class="main11">
+            <div class="tital7">
+                <h3>TESTIMONIAL</h3>
+            </div>
+            <div class="tital8">
+                <h1>WHAT PEOPLE SAY</h1>
+            </div>
+        </div>
+        <div class="main12">
+            <div class="conn12">
+                {% for i in rec1 %}
+                <div class="cards">
+                    <img src="/media/{{i.image}}" alt="" style="width:100%">
+                    <div class="container">
+                        {% load custom_filter %}
+                        {% with data=i.content1|split %}
+                        {% for element in data %}
+                        <p>{{element}}</p>
+                        {% endfor %}
+                        {% endwith %}
+                    </div>
+                    <div class="name">
+                        <h2>{{i.name}}</h2>
+                    </div>
+            
+            </div>
+            {% if forloop.counter|divisibleby:4 %}</div><div class="conn12">{% endif %}
+                
+            {% endfor %}
+        </div>
+        <div class="background4">
+            <div class="conn15">
+                <h1>LATEST BLOG</h1>
+            </div>
+           
+        </div>
+        
+    </section>
+    <section>
+        <div class="mainform">
+            <div class="tital13">
+                <h1>GET IN TOUCH</h1>
+            </div>
+        </div>
+        <div class="main20">
+            <div class="main21">
+                <div class="box1">
+                    <h1>adress</h1>
+                    <p>49 Park Avenue,<br>
+                        Jakatnaka , Surat 395006</p>
+                </div>
+                <div class="box2">
+                    <h1>Phone</h1>
+                    <p>9274744705<br>
+                        0027 11566 0124</p>
+                </div>
+                <div class="box3">
+                    <h1>Email Address</h1>
+                    <p>info@domainname.c<br>
+                        om<br>
+                        Contact@domainna<br>
+                        me.com</p>
+                      
+                </div>
+            </div>
+            <div class="main22">
+                <div class="main23">
+                    <h1>Ask any kind of questions</h1>
+                </div>
+                <div class="paras">
+                    <p>To shewing another demands to. Marianne property cheerful informed at striking at. Clothes parlors however by<br>
+                        cottage on.</p>
+                </div>
+               <div class="container">
+                <form>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="boot">
+                        <button type="submit">Send Now</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <footer>
+        <div class="background5">
+           <div class="logo1">
+            <a href="home.html">
+                <img class="logo" src="../static/image/appnext-1-removebg-preview.png" alt="" height="50px" ></a>
+           </div>
+           <div class="conn14">
+            <p>May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring extensive<br>
+                believing add.</p>
+           </div>
+           <div class="icns">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+           </div>
+           <div class="border">
+
+           </div>
+           <div class="copy">
+            <p>Copyright © AppNext 2020. All Rights Reserved.</p>
+           </div>
+        </div>
+    </footer>
+</body>
+</html>
